@@ -73,7 +73,7 @@ class Server:
         """Retrieves hyper information about a page.
         """
         dataset = self.dataset()
-        start_index, end_index  = index_range(page, page_size)
+        start_index, end_index = index_range(page, page_size)
         data = self.get_page(page, page_size)
         total_pages = math.ceil(len(dataset) / page_size)
 
