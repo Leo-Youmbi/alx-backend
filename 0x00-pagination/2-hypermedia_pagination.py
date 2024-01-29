@@ -70,6 +70,8 @@ class Server:
         return result
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
+        """Retrieves hyper information about a page.
+        """
         dataset = self.dataset()
         start_index, end_index  = index_range(page, page_size)
         data = self.get_page(page, page_size)
